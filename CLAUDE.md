@@ -116,3 +116,6 @@ When using AI to generate or modify code:
 - Test changes in the browser across mobile, tablet, and desktop viewports.
 - Document significant AI-assisted decisions in commit messages or PR descriptions.
 - Do not paste secrets, API keys, or private data into AI prompts.
+## Coding Guidelines
+
+- Keep components modular and reusable.
