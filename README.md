@@ -16,37 +16,69 @@ The capstone aligns with FlyRank's Front-end AI Engineering brief: deliver a pub
 
 ---
 
+
+
 ## Objectives
 
-| Objective | Description |
-|-----------|-------------|
-| **Responsive design** | Mobile-first layout that scales cleanly across breakpoints without horizontal scroll or broken UI |
-| **Tailwind execution** | Consistent spacing, typography, and color system using utility-first CSS |
-| **Component architecture** | Reusable, readable React components with clear separation of concerns |
-| **AI-assisted workflow** | Document prompts, iterations, and debugging steps used during development |
-| **Accessibility** | Semantic HTML, keyboard navigation, and sufficient color contrast |
-| **Performance** | Optimized assets, lazy loading where appropriate, and fast initial page load |
-| **Deployable artifact** | Public URL suitable for mentor review and portfolio use |
+
+| Objective                  | Description                                                                                       |
+| -------------------------- | ------------------------------------------------------------------------------------------------- |
+| **Responsive design**      | Mobile-first layout that scales cleanly across breakpoints without horizontal scroll or broken UI |
+| **Tailwind execution**     | Consistent spacing, typography, and color system using utility-first CSS                          |
+| **Component architecture** | Reusable, readable React components with clear separation of concerns                             |
+| **AI-assisted workflow**   | Document prompts, iterations, and debugging steps used during development                         |
+| **Accessibility**          | Semantic HTML, keyboard navigation, and sufficient color contrast                                 |
+| **Performance**            | Optimized assets, lazy loading where appropriate, and fast initial page load                      |
+| **Deployable artifact**    | Public URL suitable for mentor review and portfolio use                                           |
+
 
 ---
+
+
 
 ## Tech Stack
 
-| Category | Technology |
-|----------|------------|
-| **Framework** | [React 19](https://react.dev/) |
-| **Build tool** | [Vite](https://vitejs.dev/) |
-| **Language** | TypeScript |
-| **Styling** | [Tailwind CSS](https://tailwindcss.com/) |
-| **Routing** | React Router *(if multi-page)* |
-| **Icons** | Lucide React / Heroicons |
-| **Deployment** | Vercel / Netlify / Cloudflare Pages |
-| **AI tooling** | Cursor, ChatGPT, or Claude *(for assisted development)* |
-| **Version control** | Git & GitHub |
+
+| Category            | Technology                                              |
+| ------------------- | ------------------------------------------------------- |
+| **Framework**       | [React 19](https://react.dev/)                          |
+| **Build tool**      | [Vite](https://vitejs.dev/)                             |
+| **Language**        | TypeScript                                              |
+| **Styling**         | [Tailwind CSS](https://tailwindcss.com/)                |
+| **Routing**         | React Router *(if multi-page)*                          |
+| **Icons**           | Lucide React / Heroicons                                |
+| **Deployment**      | Vercel / Netlify / Cloudflare Pages                     |
+| **AI tooling**      | Cursor, ChatGPT, or Claude *(for assisted development)* |
+| **Version control** | Git & GitHub                                            |
+
+
+
+
+Planned Tech Stack
+
+- HTML
+
+- CSS
+
+- JavaScript
+
+- React (planned)
+
+- Git
+
+- GitHub
+
+- Cursor AI
+
+
 
 ---
 
+
+
 ## Installation
+
+
 
 ### Prerequisites
 
@@ -54,47 +86,46 @@ The capstone aligns with FlyRank's Front-end AI Engineering brief: deliver a pub
 - npm, pnpm, or yarn
 - Git
 
+
+
 ### Setup
 
 1. **Clone the repository**
-
-   ```bash
+  ```bash
    git clone https://github.com/<your-username>/flyrank-frontend-capstone.git
    cd flyrank-frontend-capstone
-   ```
-
+  ```
 2. **Install dependencies**
-
-   ```bash
+  ```bash
    npm install
-   ```
-
+  ```
 3. **Configure environment variables** *(if applicable)*
-
-   ```bash
+  ```bash
    cp .env.example .env
-   ```
-
+  ```
    Edit `.env` with any required API keys or configuration values.
-
 4. **Start the development server**
-
-   ```bash
+  ```bash
    npm run dev
-   ```
-
+  ```
    Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+
 
 ### Available Scripts
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start local development server with hot reload |
-| `npm run build` | Compile TypeScript and build for production |
-| `npm run preview` | Preview the production build locally |
-| `npm run lint` | Run ESLint across the project |
+
+| Command           | Description                                    |
+| ----------------- | ---------------------------------------------- |
+| `npm run dev`     | Start local development server with hot reload |
+| `npm run build`   | Compile TypeScript and build for production    |
+| `npm run preview` | Preview the production build locally           |
+| `npm run lint`    | Run ESLint across the project                  |
+
 
 ---
+
+
 
 ## Folder Structure
 
@@ -124,6 +155,8 @@ flyrank-frontend-capstone/
 
 ---
 
+
+
 ## AI-Assisted Development
 
 This project was built using AI as a development partner, consistent with FlyRank capstone requirements. The workflow included:
@@ -136,6 +169,8 @@ This project was built using AI as a development partner, consistent with FlyRan
 > Reviewers can inspect commit history and this README for evidence of ownership, safe AI use, and a clear explanation of what was built.
 
 ---
+
+
 
 ## Future Improvements
 
@@ -151,16 +186,35 @@ This project was built using AI as a development partner, consistent with FlyRan
 
 ---
 
+
+
 ## License
 
 This project was created as educational work for the FlyRank AI Internship. All code is owned by the author and may be used in personal portfolios.
 
 ---
 
+
+
 ## Author
 
-**[Your Name]** — FlyRank AI Internship, Front-end AI Engineering Track
+**[Dola Praveen]** — FlyRank AI Internship, Front-end AI Engineering Track
 
-- GitHub: [@your-username](https://github.com/your-username)
-- LinkedIn: [Your Profile](https://linkedin.com/in/your-profile)
-- Live site: *[your-deployed-url]*
+- GitHub:   **[https://github.com/mrdola22-commits/flyrank-frontend-capstone.git](https://github.com/mrdola22-commits/flyrank-frontend-capstone.git)  [](https://github.com/your-username)
+- LinkedIn: [Yhttps://www.linkedin.com/in/dola-mr-b7700036b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app](https://linkedin.com/in/your-profile)
+- Live site: Live demo: Not deployed yet (will be deployed during the internship).
+
+
+
+
+
+## Progress
+
+- Initial project setup completed.
+
+- GitHub repository created.
+
+- AI development environment configured.
+
+
+
