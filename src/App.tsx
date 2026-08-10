@@ -1,11 +1,30 @@
+import { useState, useEffect } from "react";
 import { Header } from "./components/layout/Header";
 import { Footer } from "./components/layout/Footer";
 import { HeroSection } from "./components/sections/HeroSection";
 import { AboutSection } from "./components/sections/AboutSection";
 import { ProjectsSection } from "./components/sections/ProjectsSection";
 import { ContactSection } from "./components/sections/ContactSection";
+import { ChatPage } from "./pages/ChatPage";
 
 export default function App() {
+  const [currentPath, setCurrentPath] = useState(window.location.pathname);
+
+  useEffect(() => {
+    const handleLocationChange = () => {
+      setCurrentPath(window.location.pathname);
+    };
+
+    window.addEventListener("popstate", handleLocationChange);
+    return () => {
+      window.removeEventListener("popstate", handleLocationChange);
+    };
+  }, []);
+
+  if (currentPath === "/chat") {
+    return <ChatPage />;
+  }
+
   return (
     <>
       <Header />
