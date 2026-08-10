@@ -29,14 +29,14 @@ export const openrouter = createOpenRouter({
  * Using a capable instruction-tuned model from OpenRouter.
  * You can change this to other models like `meta-llama/Meta-Llama-3-11B-Instruct-Turbo`.
  */
-export const defaultModel = openrouter('meta-llama/Meta-Llama-3-11B-Instruct-Turbo');
+export const defaultModel = openrouter('meta-llama/llama-3.1-8b-instruct');
 
 /**
  * Streaming model for chat responses
  *
  * Same model used for streaming to ensure consistency.
  */
-export const streamingModel = openrouter('meta-llama/Meta-Llama-3-11B-Instruct-Turbo');
+export const streamingModel = openrouter('meta-llama/llama-3.1-8b-instruct');
 
 /**
  * System prompt for the AI assistant

@@ -39,7 +39,7 @@ export function Chat() {
     messages: [
       {
         id: "system-msg",
-        role: "system",
+        role: "system" as "system" | "user" | "assistant",
         parts: [
           {
             type: "text",
@@ -53,19 +53,21 @@ export function Chat() {
   // Determine if we're streaming based on status
   const isStreaming = status === "streaming" || status === "submitted";
 
-  // Convert AI messages to our format
-  const messages: Message[] = aiMessages.map((msg, index) => {
-    const textContent = msg.parts
-      .filter((part) => part.type === "text")
-      .map((part) => part.text)
-      .join("");
-    return {
-      id: msg.id || `msg-${index}`,
-      role: msg.role as Role,
-      content: textContent,
-      createdAt: new Date(),
-    };
-  });
+  // Convert AI messages to our format (filter out system messages)
+  const messages: Message[] = aiMessages
+    .filter((msg) => msg.role === "user" || msg.role === "assistant")
+    .map((msg, index) => {
+      const textContent = msg.parts
+        .filter((part) => part.type === "text")
+        .map((part) => part.text)
+        .join("");
+      return {
+        id: msg.id || `msg-${index}`,
+        role: msg.role as Role,
+        content: textContent,
+        createdAt: new Date(),
+      };
+    });
 
   // Handle scroll events
   useEffect(() => {

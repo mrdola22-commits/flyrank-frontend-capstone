@@ -21,7 +21,9 @@ export default function App() {
     };
   }, []);
 
-  if (currentPath === "/chat") {
+  const normalizedPath = currentPath.toLowerCase().replace(/\/$/, "");
+
+  if (normalizedPath === "/chat") {
     return <ChatPage />;
   }
 

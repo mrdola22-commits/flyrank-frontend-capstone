@@ -61,12 +61,27 @@ app.post("/api/chat", async (req, res) => {
 
   try {
     // Convert UI messages format to Model messages
-    const formattedMessages = convertToModelMessages(messages);
+    const formattedMessages = await convertToModelMessages(messages);
+
+    // Extract system message if present
+    let systemInstruction = undefined;
+    const systemMessage = formattedMessages.find(msg => msg.role === "system");
+    if (systemMessage) {
+      if (typeof systemMessage.content === "string") {
+        systemInstruction = systemMessage.content;
+      } else if (Array.isArray(systemMessage.content)) {
+        systemInstruction = systemMessage.content.map(part => part.text || "").join("");
+      }
+    }
+
+    // Filter out system messages from messages passed to streamText
+    const chatMessages = formattedMessages.filter(msg => msg.role !== "system");
 
     // Get the streaming response using meta-llama model
     const result = streamText({
-      model: openrouter("meta-llama/Meta-Llama-3-11B-Instruct-Turbo"),
-      messages: formattedMessages,
+      model: openrouter("meta-llama/llama-3.1-8b-instruct"),
+      system: systemInstruction,
+      messages: chatMessages,
       temperature: 0.7,
       maxTokens: 1000,
     });
